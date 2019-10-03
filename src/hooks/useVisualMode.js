@@ -16,7 +16,6 @@ export default function useVisualMode(initial) {
       placeableHistory.push(mode);
       setHistory(placeableHistory)
       setMode(mode);
-      
     }
 
     function back() {
