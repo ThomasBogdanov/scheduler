@@ -1,5 +1,12 @@
 import { useEffect, useReducer } from "react";
 import axios from "axios";
+import reducer, {
+  SET_DAY,
+  SET_APPLICATION_DATA,
+  SET_INTERVIEW,
+  DELETE_INTERVIEW,
+  SET_DAYS
+} from "reducers/application";
 
 export default function useApplicationData(initial) {
 
@@ -16,38 +23,27 @@ export default function useApplicationData(initial) {
     interviewers: {}
   });
 
-  function reducer(state, action) {
-    switch (action.type) {
-      case SET_DAY:
-        return ({...state, day: action.value})
-      case SET_APPLICATION_DATA:
-        return ({...state, days: action.value.days, appointments: action.value.appointments, interviewers: action.value.interviewers})
-      case SET_INTERVIEW: {
-        return ({...state, appointments: action.value})
-      }
-      case DELETE_INTERVIEW: {
-        return ({...state, appointments: action.value})
-      }
-      case SET_DAYS: {
-        return ({...state, days: action.days})
-      }
-      // case SPOTS: {
-        
-      //               const dayObj = state.days.filter(
-      //                 day => day.name === state.day
-      //               )[0];
-      //               const day = {
-      //                 ...dayObj,
-      //                 spots: dayObj.spot + action.value
-      //               };
-      //               return { ...state, days: reMapDays(state.days, day) };
-      //             }
-      default:
-        throw new Error(
-          `Tried to reduce with unsupported action type: ${action.type}`
-        );
-    }
-  }
+  // function reducer(state, action) {
+  //   switch (action.type) {
+  //     case SET_DAY:
+  //       return ({...state, day: action.value})
+  //     case SET_APPLICATION_DATA:
+  //       return ({...state, days: action.value.days, appointments: action.value.appointments, interviewers: action.value.interviewers})
+  //     case SET_INTERVIEW: {
+  //       return ({...state, appointments: action.value})
+  //     }
+  //     case DELETE_INTERVIEW: {
+  //       return ({...state, appointments: action.value})
+  //     }
+  //     case SET_DAYS: {
+  //       return ({...state, days: action.days})
+  //     }
+  //     default:
+  //       throw new Error(
+  //         `Tried to reduce with unsupported action type: ${action.type}`
+  //       );
+  //   }
+  // }
 
   const setDay = day => dispatchAction({type: SET_DAY, value: day });
 
