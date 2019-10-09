@@ -10,15 +10,15 @@ Using the latest tools and techniques, I created a React application that allows
 This app is able to:
 
 - View each day and the spots remaining for each day with the interactive UI:
-!["View Days!"]
+!["View Days!"](https://github.com/ThomasBogdanov/scheduler/blob/master/public/GIFs/ViewDays.gif?raw=true)
 - View all the appointments available for a given day :
-!["View Appointments!"]
+!["View Appointments!"](https://github.com/ThomasBogdanov/scheduler/blob/master/public/GIFs/ViewApps.gif?raw=true)
 - Add and create an interview with your name and Instructor of choice:
-!["Add and Create!"]
+!["Add and Create!"](https://github.com/ThomasBogdanov/scheduler/blob/master/public/GIFs/AddApp.gif?raw=true)
 - Edit and save previously added interviews :
-!["Edit!"]
+!["Edit!"](https://github.com/ThomasBogdanov/scheduler/blob/master/public/GIFs/EditApp.gif?raw=true)
 - Delete Interview with a confirmation :
-!["Delete!"]
+!["Delete!"](https://github.com/ThomasBogdanov/scheduler/blob/master/public/GIFs/DeleteApp.gif?raw=true)
 
 ## Setup
 
